@@ -1,12 +1,8 @@
-<h1 class="my-3">
-  <i class="fa-solid fa-layer-group fs-4"></i> My lists
-</h1>
-
-<ul class="list-unstyled grid mt-2" data-controller="insert-list">
+<ul class="list-unstyled grid mt-5" style="grid-auto-rows: 1fr;" data-controller="insert-list">
   <% @lists.each do |list| %>
     <%= render "list_card", list: list %>
   <% end %>
-  <li class="g-col-3" data-insert-list-target="last">
+  <li class="g-col-6 g-col-lg-4 g-col-xl-3" data-insert-list-target="last">
     <%= render "new_list_card" %>
   </li>
 </ul>

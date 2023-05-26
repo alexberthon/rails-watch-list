@@ -1,12 +1,8 @@
-<h1 class="my-3">
-  <i class="fa-solid fa-clipboard-list fs-4"></i> <%= @list.name %>
-</h1>
-
-<ul class="list-unstyled grid mt-2" style="grid-auto-rows: 1fr;" data-controller="insert-bookmark">
+<ul class="list-unstyled grid mt-5" style="grid-auto-rows: 1fr;" data-controller="insert-bookmark">
   <% @list.bookmarks.each do |bookmark| %>
     <%= render "bookmark_card", bookmark: bookmark %>
   <% end %>
-    <li class="g-col-3" data-insert-bookmark-target="last">
+    <li class="g-col-6 g-col-lg-4 g-col-xl-3" data-insert-bookmark-target="last">
       <%= render "new_bookmark_card" %>
     </li>
 </ul>
