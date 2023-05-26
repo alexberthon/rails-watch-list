@@ -1,0 +1,23 @@
+.card,
+.card-category {
+
+  .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.3em 0.6em;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .delete-btn,
+  .delete-btn:active {
+    color: white;
+  }
+
+  &:hover {
+    .delete-btn {
+      opacity: 1;
+    }
+  }
+}

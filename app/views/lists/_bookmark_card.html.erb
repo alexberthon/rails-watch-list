@@ -1,0 +1,26 @@
+<li class="g-col-3">
+  <div class="card rounded-4 overflow-hidden h-100 position-relative">
+    <%= link_to bookmark_path(bookmark),
+          data: { "turbo-method": "delete", "turbo-confirm": "Are you sure?" },
+          class: "btn btn-danger rounded-3 delete-btn" do %>
+      <i class="fa-solid fa-trash-can"></i>
+    <% end %>
+    <img src=<%= bookmark.movie.poster_url %>
+        class="card-img-top"
+        alt="<%= bookmark.movie.title %> poster">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h6 class="card-text fw-bold m-0"><%= bookmark.movie.title %></h6>
+        <span>
+          <i class="fa-solid fa-star text-info"></i> <%= bookmark.movie.rating %>
+        </span>
+      </div>
+      <p class="m-0" style="font-size: 0.8em;"><%= bookmark.movie.overview %></p>
+    </div>
+    <div class="card-footer border-top">
+      <p class="m-0 fst-italic">
+        <i class="fa-solid fa-quote-left"></i> <%= bookmark.comment %>
+      </p>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,35 @@
+<a href="#" class="text-decoration-none", data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+  <div class="p-3 rounded-4 bg-transparent h-100 d-flex flex-column justify-content-center align-items-center text-secondary border border-secondary"
+  style="border-style: dashed!important">
+    <div class="fs-2">
+      <i class="fa-solid fa-circle-plus"></i>
+    </div>
+    <div class="text-center">
+      Add a new list
+    </div>
+  </div>
+</a>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Add a new list</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <%= render "new_list_form", list: @list %>
+
+    <%# <form id="newList" data-insert-list-target="form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" type="text" name="name" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="image_url" class="form-label">Image url</label>
+        <input id="image_url" type="text" name="image_url" class="form-control">
+      </div>
+      <div class="mb-3">
+        <input type="submit" value="Add list" class="btn btn-primary w-100">
+      </div>
+    </form> %>
+  </div>
+</div>
