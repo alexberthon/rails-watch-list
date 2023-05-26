@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { Offcanvas } from "bootstrap"
 
 // Connects to data-controller="insert-bookmark"
 export default class extends Controller {
@@ -18,6 +19,8 @@ export default class extends Controller {
       .then((data) => {
         if (data.persisted_item) {
           this.lastTarget.insertAdjacentHTML("beforebegin", data.persisted_item)
+          const offcanvasEl = document.getElementById("offcanvasRight");
+          Offcanvas.getInstance(offcanvasEl).hide();
         }
         this.formTarget.outerHTML = data.form
       })

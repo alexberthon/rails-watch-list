@@ -4,6 +4,6 @@
       action: "submit->insert-list#send"
     } do |f| %>
   <%= f.input :name %>
-  <%= f.input :image_url %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Add list" , "class": "btn btn-primary w-100 mt-3" %>
 <% end %>
