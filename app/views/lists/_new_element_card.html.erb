@@ -1,0 +1,20 @@
+<a href="#" class="text-decoration-none", data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+  <div class="p-3 new-card">
+    <div class="fs-2">
+      <i class="fa-solid fa-circle-plus"></i>
+    </div>
+    <div class="text-center">
+      Add a new <%= element %>
+    </div>
+  </div>
+</a>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Add a new <%= element %></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <%= yield %>
+  </div>
+</div>
